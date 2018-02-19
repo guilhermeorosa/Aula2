@@ -1,0 +1,28 @@
+package br.com.fiap.entity;
+
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+public class Cliente {
+	
+	@Id
+	@Column(name= "CD_CLIENTE")
+	private int id;
+	
+	
+	@Column(name="DS_NOME", length=100)
+	private String nome;
+	
+	@Column(name="DT_NASCIMENTO")
+	@Temporal(TemporalType.DATE)
+	private Calendar dataAniversario;
+	
+	@Column(name="CD_CARTAO")
+	private int cartaoF;
+	
+	private
+}

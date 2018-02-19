@@ -1,0 +1,45 @@
+package br.com.fiap.entity;
+
+import java.io.Serializable;
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TB_CARRO")
+@SequenceGenerator(name="carro", sequenceName="SQ_TB_CARRO", allocationSize=1)
+public class Carro implements Serializable{
+	
+	@Id
+	@Column(name="CD_CARRO")
+	@GeneratedValue(generator="carro", strategy=GenerationType.SEQUENCE)
+	private int id;
+	
+	@Column(name="DS_MODELO")
+	private String modelo;
+	
+	@Column(name="NR_ANO")
+	private int ano;
+	
+	@Column(name="DS_MOTOR")
+	private String motor;
+	
+	@Column(name="DS_MONTADORA")
+	private String montadora;
+	
+	@Column(name="DS_PLACA")
+	private String placa;
+	
+	@Column(name="DT_FABRICACAO")
+	private Calendar dataFabricacao;
+	
+	
+	
+	
+}

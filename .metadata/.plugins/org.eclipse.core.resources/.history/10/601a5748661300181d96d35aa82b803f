@@ -1,0 +1,13 @@
+package br.com.fiap.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TB_CARRO")
+public class Carro implements Serializable{
+	
+	
+}

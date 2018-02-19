@@ -1,0 +1,25 @@
+package br.com.fiap.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TB_CARRO")
+@SequenceGenerator(name="carro", sequenceName="")
+public class Carro implements Serializable{
+	
+	@Id
+	@Column(name="CD_CARRO")
+	@GeneratedValue(generator="carro", strategy=GenerationType.SEQUENCE)
+	private int id;
+	
+	
+	
+}
